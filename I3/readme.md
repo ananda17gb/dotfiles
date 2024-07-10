@@ -1,0 +1,15 @@
+# Additional Installation
+- polybar
+- kitty
+- rofi
+- picom
+- feh
+- autotiling
+- picom
+- easyeffects
+- git
+- nodejs
+- npm
+- vscode
+- betterlockscreen
+- FantasqueSansM Nerd Font or FiraCode Nerd Font or JetBrainsMono Nerd Font 9
