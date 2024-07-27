@@ -1,15 +1,10 @@
-# Additional Installation
+# Things needed to be installed
 - polybar
 - kitty
 - rofi
 - picom
 - feh
 - autotiling
-- picom
-- easyeffects
 - git
-- nodejs
-- npm
-- vscode
 - betterlockscreen
-- FantasqueSansM Nerd Font or FiraCode Nerd Font or JetBrainsMono Nerd Font 9
+- FantasqueSansM Nerd Font or FiraCode Nerd Font or JetBrainsMono Nerd Font (or any other fonts, but you need to edit the config file for polybar, i3, kitty, and more)
