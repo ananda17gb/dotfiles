@@ -12,19 +12,22 @@
 set $mod Mod4
 
 # startup
-exec --no-startup-id xautolock -time 10 -locker 'betterlockscreen -l' -detectsleep
+#exec --no-startup-id xautolock -time 10 -locker 'betterlockscreen -l' -detectsleep
 exec_always --no-startup-id killall polybar
-# exec --no-startup-id easyeffects --gapplication-service
 exec_always --no-startup-id /home/ananda/.config/polybar/launch_polybar.sh
-exec_always feh --bg-scale /usr/share/backgrounds/anime.png
-exec_always --no-startup-id /home/ananda/.local/bin/autotiling
-exec --no-startup-id picom &
-exec --no-startup-id /home/ananda/config/screen.sh
-# exec --no-startup-id /usr/bin/lxpolkit &
+exec_always feh --bg-scale /usr/share/backgrounds/restaurant.jpg
+exec_always --no-startup-id /usr/bin/autotiling
+#exec --no-startup-id picom &
+exec --no-startup-id xrandr -r 60
+#exec --no-startup-id /home/ananda/config/screen.sh
+exec --no-startup-id /usr/bin/lxsession &
 exec --no-startup-id easyeffects --gapplication-service
 
 
-bindsym $mod+Shift+l exec betterlockscreen -l
+#bindsym $mod+Shift+l exec betterlockscreen -l
+
+bindsym $mod+Shift+s exec xfce4-screenshooter
+
 
 # Decrease brightness
 bindsym $mod+F1 exec --no-startup-id xrandr --output eDP-1 --brightness 0.5
@@ -78,8 +81,8 @@ bindsym $mod+Return exec kitty
 bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
-# bindsym $mod+d exec --no-startup-id "dmenu_run -nf '#BBBBBB' -nb '#222222' -sb '#005577' -sf '#EEEEEE' -fn 'monospace-10'"
-bindsym $mod+d exec rofi -show combi
+bindsym $mod+d exec --no-startup-id "dmenu_run -nf '#FBF1C7' -nb '#282828' -sb '#EBDBB2' -sf '#282828' -fn 'monospace-10' -b"
+# bindsym $mod+d exec rofi -show combi
 # A more modern dmenu replacement is rofi:
 # bindcode $mod+40 exec "rofi -modi drun,run -show drun"
 # There also is i3-dmenu-desktop which only displays applications shipping a
@@ -253,6 +256,7 @@ client.background       #FFFFFF
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 # bar {
+#   position top
 #   colors {
 #     background #000000
 #     statusline #FFFFFF
@@ -274,3 +278,6 @@ new_window pixel 2
 # Gap
 gaps inner 3
 gaps outer 0
+
+# Gap atas
+gaps top 32
