@@ -13,20 +13,25 @@ set $mod Mod4
 
 # startup
 #exec --no-startup-id xautolock -time 10 -locker 'betterlockscreen -l' -detectsleep
+exec --no-startup-id xss-lock -- /home/ananda/.config/scripts/lock -n
 exec_always --no-startup-id killall polybar
 exec_always --no-startup-id /home/ananda/.config/polybar/launch_polybar.sh
-exec_always feh --bg-scale /usr/share/backgrounds/restaurant.jpg
+exec_always feh --bg-scale /usr/share/background/wallpaper/forest.jpg
 exec_always --no-startup-id /usr/bin/autotiling
 #exec --no-startup-id picom &
 exec --no-startup-id xrandr -r 60
-#exec --no-startup-id /home/ananda/config/screen.sh
+exec --no-startup-id /home/ananda/.config/scripts/xrandr-screen-home.sh
 exec --no-startup-id /usr/bin/lxsession &
 exec --no-startup-id easyeffects --gapplication-service
+exec --no-startup-id fcitx -d
 
 
-#bindsym $mod+Shift+l exec betterlockscreen -l
+bindsym $mod+Shift+l exec /home/ananda/.config/scripts/lock
 
-bindsym $mod+Shift+s exec xfce4-screenshooter
+# Screenshot
+bindsym Print exec maim ~/Pictures/Screenshots/$(date +%Y-%m-%d_%H-%M-%S).png
+
+bindsym Shift+Print exec maim -s ~/Pictures/Screenshots/$(date +%Y-%m-%d_%H-%M-%S).png
 
 
 # Decrease brightness
@@ -34,6 +39,9 @@ bindsym $mod+F1 exec --no-startup-id xrandr --output eDP-1 --brightness 0.5
 
 # Increase brightness
 bindsym $mod+F2 exec --no-startup-id xrandr --output eDP-1 --brightness 1.0
+
+
+
 
 
 # Font for window titles. Will also be used by the bar unless a different font
