@@ -255,8 +255,8 @@ git:
   #
   # See https://github.com/jesseduffield/lazygit/blob/master/docs/Custom_Pagers.md
   # for more information.
-  pagers:
-    - pager: delta --dark --paging=never --syntax-theme base16-256 -s
+  diffRenderers:
+    - command: delta --dark --paging=never --syntax-theme base16-256 -s
       colorArg: "always"
   # Config relating to committing
   commit:
@@ -506,7 +506,7 @@ keybinding:
     prevTab: "["
     nextScreenMode: +
     prevScreenMode: _
-    cyclePagers: "|"
+    cycleDiffRenderers: "|"
     undo: z
     redo: Z
     filteringMenu: <ctrl+s>
