@@ -83,12 +83,12 @@ style = 'bold grey'
 [git_state]
 format = '\[[$state ($progress_current/$progress_total)]($style)\]'
 style = 'bold grey'
-merge = '[🔀 MERGING]'
-rebase = '[🛠 REBASING]'
-cherry_pick = '[🍒 PICKING]'
-bisect = '[🔍 BISECTING]'
-am = '[📫 APPLY]'
-am_or_rebase = '[🔧 AM/REBASE]'
+merge = '🔀'
+rebase = '🛠'
+cherry_pick = '🍒'
+bisect = '🔍'
+am = '📫'
+am_or_rebase = '🔧'
 
 [git_status]
 format = '([\[$all_status - $ahead_behind\]]($style))'
