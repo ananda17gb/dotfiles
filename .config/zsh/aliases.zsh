@@ -1,4 +1,5 @@
-alias n="~/.config/kitty/scripts/kitty_nvim.sh"
+# alias n="~/.config/kitty/scripts/kitty_nvim.sh"
+alias n='NVIM_APPNAME="nvim-lazy" nvim'
 alias v="~/.config/kitty/scripts/kitty_nvim.sh"
 
 alias nzsh="n $ZDOTDIR/.zshrc"
@@ -15,6 +16,7 @@ alias mpv="nice -n 19 env MESA_VK_DEVICE_SELECT_FORCE_DEFAULT_DEVICE=1 mpv"
 alias celluloid="env DRI_PRIME=0 celluloid"
 alias ping="prettyping"
 alias lg="lazygit"
+alias cal="cal -y -m"
 
 ### zim-utility ###
 
