@@ -1,5 +1,5 @@
 format = """
-${custom.cat}$fill${custom.time_day}${custom.time_date}${custom.time_clock}$battery${custom.inhibit}| ${custom.bluetooth}${custom.wifi}${custom.profile}\
+${custom.cat}$fill${custom.docker}${custom.time_day}${custom.time_date}${custom.time_clock}$battery${custom.inhibit}| ${custom.bluetooth}${custom.wifi}${custom.profile}\
 $line_break\
 $username\
 $hostname\
@@ -185,7 +185,7 @@ format = "[$output]($style) "
 shell = ["zsh"]
 
 [custom.time_day]
-command = "printf $(date +%u)"
+command = "printf 0$(date +%u)"
 when = true
 style = "grey"
 format = "[$output]($style)"
@@ -210,6 +210,13 @@ command = "printf $(date +%H%M)"
 when = true
 style = "bold white"
 format = "[$output]($style) "    # Exactly one trailing space to separate it from the battery component
+shell = ["zsh"]
+
+[custom.docker]
+command = "echo ' '"
+when = "systemctl is-active --quiet docker.service"
+style = "bold blue"
+format = "[$output]($style) | "
 shell = ["zsh"]
 
 [time]
