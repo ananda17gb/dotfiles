@@ -20,7 +20,7 @@ $lua\
 $jobs\
 $env_var\
 $cmd_duration\
-$fill${custom.time_day}${custom.time_date}${custom.time_clock}$battery${custom.inhibit}| ${custom.bluetooth}${custom.wifi}${custom.profile}\
+$fill${custom.docker}${custom.time_day}${custom.time_date}${custom.time_clock}$battery${custom.inhibit}| ${custom.bluetooth}${custom.wifi}${custom.profile}\
 $line_break\
 $status\
 $character"""
@@ -54,12 +54,12 @@ style = 'bold grey'
 [git_state]
 format = '\[[$state ($progress_current/$progress_total)]($style)\]'
 style = 'bold grey'
-merge = '[🔀 MERGING]'
-rebase = '[🛠 REBASING]'
-cherry_pick = '[🍒 PICKING]'
-bisect = '[🔍 BISECTING]'
-am = '[📫 APPLY]'
-am_or_rebase = '[🔧 AM/REBASE]'
+merge = '🔀'
+rebase = '🛠'
+cherry_pick = '🍒'
+bisect = '🔍'
+am = '📫'
+am_or_rebase = '🔧'
 
 [git_status]
 format = '([\[$all_status - $ahead_behind\]]($style))'
@@ -156,14 +156,14 @@ format = "[$output]($style) "
 shell = ["zsh"]
 
 [custom.time_day]
-command = "printf $(date +%u)"
+command = "printf 0$(date +%u)"
 when = true
 style = "grey"
 format = "[$output]($style)"
 shell = ["zsh"]
 
 [custom.cat]
-command = 'echo "ᓚ₍⑅^- .-^₎ -ᶻ 𝗓 𐰁"'
+command = 'echo "ᓚ₍ ^. ̫ .^₎"'
 when = true
 shell = ["zsh"]
 style = "bold grey"
@@ -183,12 +183,13 @@ style = "bold white"
 format = "[$output]($style) "    # Exactly one trailing space to separate it from the battery component
 shell = ["zsh"]
 
-[custom.sudo]
-command = 'echo ""'
-when = '[ "$EUID" -eq 0 ] || [ "$USER" = "root" ]'
-style = "bold grey"
+[custom.docker]
+command = "echo ' '"
+when = "systemctl is-active --quiet docker.service"
+style = "bold blue"
+format = "[$output]($style) | "
 shell = ["zsh"]
-format = "[$output]($style)"
+
 
 [time]
 disabled = true
@@ -218,10 +219,9 @@ style = "bold yellow"
 [username]
 style_user = "bold grey"
 style_root = "bold red"
-format = "[$user]($style) "
-disabled = false
+format = "[$user]($style) on "
+disabled = true
 show_always = false
-aliases = { "root" = "" }
 
 [status]
 style = "bg:background"
@@ -321,3 +321,4 @@ magenta = "#CF86C1"
 blue = "#6099C0"
 
 palette = "darker-zenwritten"
+

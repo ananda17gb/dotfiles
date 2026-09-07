@@ -1,12 +1,52 @@
 [[plugin.deps]]
-use = "yazi-rs/plugins:smart-filter"
-rev = "4c63ed3"
-hash = "d6f7351ea25a43c9b5f4315fa1e23935"
+use = "boydaihungst/mediainfo"
+rev = "73a3658"
+hash = "fa787a8ef785f2976ea2861f62b8c6c4"
+
+[[plugin.deps]]
+use = "AminurAlam/yazi-plugins:spot"
+rev = "8c2ce96"
+hash = "5c045744914668f647e67bd4ea3fb9a2"
+
+[[plugin.deps]]
+use = "AminurAlam/yazi-plugins:spot-audio"
+rev = "8c2ce96"
+hash = "d5b679a595f131bbd4bd789ec47cd8bb"
+
+[[plugin.deps]]
+use = "Rolv-Apneseth/starship"
+rev = "ea92cf4"
+hash = "9776f378459072b6c2875eae5addc49d"
+
+[[plugin.deps]]
+use = "yazi-rs/plugins:mime-ext"
+rev = "72f9e3c"
+hash = "3bcc00df11efc3ae5d15f2dba860be7"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:git"
-rev = "4c63ed3"
-hash = "88e56a64b7ce7c4314427452343fef17"
+rev = "72f9e3c"
+hash = "5bb0bfab901d3601c370eafdd66edd31"
+
+[[plugin.deps]]
+use = "Lil-Dank/lazygit"
+rev = "e73fd74"
+hash = "6ea5f37c7f219671ec504cb8311f889d"
+
+[[plugin.deps]]
+use = "yazi-rs/plugins:full-border"
+rev = "72f9e3c"
+hash = "f281261ff04ad7ec867c3f802a50835f"
+
+[[plugin.deps]]
+use = "AnirudhG07/rich-preview"
+rev = "02597c4"
+hash = "33982a6e2d6df07619a2a0fc163a0950"
+
+[[plugin.deps]]
+use = "AminurAlam/yazi-plugins:preview-git"
+rev = "8c2ce96"
+hash = "ba369f2f02be9e932cf7882c113d6844"
 
 [[plugin.deps]]
 use = "jessefarinacci/confirm-quit"
@@ -14,74 +54,14 @@ rev = "6fec416"
 hash = "c6cce44dacc7d1d93b6604f15cdcc539"
 
 [[plugin.deps]]
-use = "uhs-robert/recycle-bin"
-rev = "82da16a"
-hash = "7383d80862d3cdcc85f8658dac7b90c2"
-
-[[plugin.deps]]
-use = "Rolv-Apneseth/starship"
-rev = "159eaba"
-hash = "7de446280b1ba8c49ffd86dbc24bbbe6"
-
-[[plugin.deps]]
-use = "yazi-rs/plugins:full-border"
-rev = "4c63ed3"
-hash = "7b625412411be411153886894d9acaf"
-
-[[plugin.deps]]
-use = "AminurAlam/yazi-plugins:preview-git"
-rev = "ce325af"
-hash = "ba369f2f02be9e932cf7882c113d6844"
-
-[[plugin.deps]]
-use = "yazi-rs/plugins:mime-ext"
-rev = "4c63ed3"
-hash = "b33b8b5e45cb10ffd31d3cccb93c6fd7"
-
-[[plugin.deps]]
-use = "MasouShizuka/close-and-restore-tab"
-rev = "b2153bc"
-hash = "1493e40f8f4f222c9ecb24cf85ccabd2"
-
-[[plugin.deps]]
-use = "AnirudhG07/rich-preview"
-rev = "7d616ad"
-hash = "d64feec9761392cbc250d199ab4b8a3a"
-
-[[plugin.deps]]
-use = "boydaihungst/mediainfo"
-rev = "e079a00"
-hash = "f9ae479bdbce6d35ec7176ee2869808d"
-
-[[plugin.deps]]
 use = "KKV9/compress"
-rev = "e60e122"
-hash = "fbaf0adc8efc59555b748d36aab62d40"
+rev = "80e5268"
+hash = "868db729374b97871bc30b96d0e9061f"
 
 [[plugin.deps]]
-use = "AminurAlam/yazi-plugins:spot"
-rev = "ce325af"
-hash = "5c045744914668f647e67bd4ea3fb9a2"
-
-[[plugin.deps]]
-use = "AminurAlam/yazi-plugins:spot-audio"
-rev = "ce325af"
-hash = "d5b679a595f131bbd4bd789ec47cd8bb"
-
-[[plugin.deps]]
-use = "yazi-rs/plugins:mount"
-rev = "4c63ed3"
-hash = "e3260d0b1feded8c8e3ae3afa1169e30"
-
-[[plugin.deps]]
-use = "boydaihungst/gvfs"
-rev = "364b0a8"
-hash = "480fde69fef0bcaeb2c21a726f94412c"
-
-[[plugin.deps]]
-use = "yazi-rs/plugins:chmod"
-rev = "4c63ed3"
-hash = "5b1c276b75cae91cbbdbe7863f39a540"
+use = "grappas/wl-clipboard"
+rev = "8cc5524"
+hash = "5c587834c274dca9059092714ece1f18"
 
 [flavor]
 deps = []
