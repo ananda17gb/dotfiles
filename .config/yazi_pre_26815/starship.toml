@@ -1,0 +1,316 @@
+format = """
+$username\
+$hostname\
+$shlvl\
+$mise\
+$directory\
+$git_branch\
+$git_commit\
+$git_state\
+$git_status\
+$git_metrics\
+$hg_branch\
+$docker_context\
+$package\
+$dart\
+$java\
+$kotlin\
+$nodejs\
+$lua\
+$jobs\
+$env_var\
+$cmd_duration\
+$fill${custom.time_day}${custom.time_date}${custom.time_clock}$battery${custom.inhibit}| ${custom.bluetooth}${custom.wifi}${custom.profile}\
+$line_break\
+$status\
+$character"""
+
+command_timeout = 5000
+scan_timeout = 5000
+
+# Don't print a new line at the start of the prompt
+add_newline = true
+
+[profiles]
+transient="""
+$character\
+"""
+
+[git_branch]
+symbol = " "
+format = '\[[$symbol$branch]($style)\]'
+style = 'bold grey'
+truncation_length = 12                  # shorten long branch names
+truncation_symbol = '…'
+always_show_remote = false
+
+[git_commit]
+format = '\[[\($hash$tag\)]($style)\]'
+tag_symbol = '  '
+commit_hash_length = 7                 # show first 7 chars
+tag_disabled = true                    # disable tags for simplicity
+style = 'bold grey'
+
+[git_state]
+format = '\[[$state ($progress_current/$progress_total)]($style)\]'
+style = 'bold grey'
+merge = '🔀'
+rebase = '🛠'
+cherry_pick = '🍒'
+bisect = '🔍'
+am = '📫'
+am_or_rebase = '🔧'
+
+[git_status]
+format = '([\[$all_status - $ahead_behind\]]($style))'
+style = 'bold white'
+staged = '[++($count)](green)'
+modified = '[~($count)](yellow)'
+deleted = '[✘($count)](red)'
+renamed = '[»($count)](cyan)'
+untracked = '[?($count)](magenta)'
+conflicted = '[⚡($count)](red)'
+stashed = '[💾($count)](blue)'
+ahead = '⇡${count}'
+behind = '⇣${count}'
+diverged = '⇕⇡${ahead_count}⇣${behind_count}'
+up_to_date = '✓'
+
+[git_metrics]
+disabled = false
+format = '\[[+$added]($added_style)/[-$deleted]($deleted_style)\]'
+added_style = 'bold grey'
+deleted_style = 'bold red'
+only_nonzero_diffs = true
+ignore_submodules = true
+
+[fill]
+symbol = ' '
+
+# Make prompt a single line instead of two lines
+[line_break]
+disabled = false
+
+[character]
+success_symbol = "[➜](bold grey)"
+error_symbol = "[➜](bold red)"
+
+# Disable the package module, hiding it from the prompt completely
+[package]
+symbol = "󰏗 "
+format = '\[[$symbol$version]($style)\]'
+disabled = false
+
+# shows the hostname on new lines
+[hostname]
+ssh_only = true
+ssh_symbol = " "
+format = '\[[$ssh_symbol($hostname)]($style)\] '
+
+# configure directory
+[directory]
+read_only = " 󰌾"
+format = "[$path](bold grey)[$read_only]($read_only_style) "
+home_symbol = "~"
+
+[cmd_duration]
+format = "took [$duration]($style)"
+style = "bold grey"
+disabled = false
+
+[custom.inhibit]
+when = 'pgrep -f "Yambar-Inhibit"'
+command = 'echo "(ᴗ_ ᴗ。)"'
+style = "bold grey"
+format = "[$output]($style) "
+shell = ["zsh"]
+
+[custom.wifi]
+command = 'echo "󰖩"'
+when = 'iwctl station list | grep -q "connected"'
+style = "bold grey"
+format = "[$output]($style) "
+shell = ["zsh"]
+
+[custom.bluetooth]
+command = 'echo ""'
+when = 'bluetoothctl info | grep -q "Connected: yes"'
+style = "bold grey"
+format = "[$output]($style) "
+shell = ["zsh"]
+
+[custom.profile]
+command = '''
+profile=$(tlpctl get)
+if [ "$profile" = "performance" ]; then
+    echo "(🔥_🔥)"
+elif [ "$profile" = "power-saver" ]; then
+    echo "(つ_-)"
+else
+    echo "(・_・)"
+fi
+'''
+when = "command -v tlpctl"
+style = "bold grey"
+format = "[$output]($style) "
+shell = ["zsh"]
+
+[custom.time_day]
+command = "printf $(date +%u)"
+when = true
+style = "grey"
+format = "[$output]($style)"
+shell = ["zsh"]
+
+[custom.cat]
+command = 'echo "ᓚ₍ ^. ̫ .^₎"'
+when = true
+shell = ["zsh"]
+style = "bold grey"
+format = "[$output]($style)"
+
+[custom.time_date]
+command = "printf $(date +%d%m)"
+when = true
+style = "bold grey"
+format = "[$output]($style)"
+shell = ["zsh"]
+
+[custom.time_clock]
+command = "printf $(date +%H%M)"
+when = true
+style = "bold white"
+format = "[$output]($style) "    # Exactly one trailing space to separate it from the battery component
+shell = ["zsh"]
+
+[time]
+disabled = true
+
+[battery]
+disabled = false
+format = "[$percentage $symbol]($style)"
+full_symbol = "󰁹 "
+charging_symbol = "󰂄 "
+discharging_symbol = "󰂃 "
+unknown_symbol = "󰂑 "
+empty_symbol = "󰂎 "
+
+
+[[battery.display]]
+threshold = 100
+style = "bold white"
+
+[[battery.display]]
+threshold = 10
+style = "bold red"
+
+[[battery.display]]
+threshold = 30
+style = "bold yellow"
+
+[username]
+style_user = "bold grey"
+style_root = "bold red"
+format = "[$user]($style) on "
+disabled = true
+show_always = false
+
+[status]
+style = "bg:background"
+symbol = " "
+format = '[\[$symbol\]]($style) '
+map_symbol = false
+disabled = true
+
+[dart]
+symbol = " "
+format = '\[[$symbol($version)]($style)\]'
+
+[docker_context]
+symbol = " "
+format = '\[[$symbol$context]($style)\]'
+
+[gradle]
+symbol = " "
+format = '\[[$symbol($version)]($style)\]'
+
+[hg_branch]
+symbol = " "
+format = '\[[$symbol$branch]($style)\]'
+
+[java]
+symbol = " "
+format = '\[[$symbol($version)]($style)\]'
+
+[lua]
+symbol = " "
+format = '\[[$symbol($version)]($style)\]'
+
+[mise]
+disabled = false
+format = '\[[$symbol$health]($style)\] '
+healthy_symbol = '󰄬 '    # nf-md-check_bold (A clean checkmark)
+unhealthy_symbol = '󰅙 '  # nf-md-close_box (A clean X mark)
+style = 'bold grey'     # Keeps the default color, or change to whatever you like
+
+[nodejs]
+symbol = " "
+format = '\[[$symbol($version)]($style)\]'
+
+[shell]
+format = '\[[$indicator]($style)\]'
+
+[sudo]
+symbol = " "
+format = '\[[as $symbol]($style)\]'
+
+[palettes.vague]
+background = "#141415"
+lighter_background = "#252530"
+foreground = "#cdcdcd"
+light_gray = "#cdcdcd"
+shadow = "#1c1c24"
+onyx = "#333738"
+muted = "#606079"
+gray = "#878787"
+white = "#cdcdcd"
+storm = "#405065"
+red = "#d8647e"
+green = "#7fa563"
+yellow = "#f3be7c"
+blue = "#6e94b2"
+magenta = "#bb9dbd"
+cyan = "#aeaed1"
+amber = "#e8b589"
+gold = "#e0a363"
+peach = "#c48282"
+lilac = "#c3c3d5"
+aqua = "#b4d4cf"
+lavender = "#90a0b5"
+teal = "#9bb4bc"
+iris = "#7e98e8"
+
+[palettes.everblush]
+background = "#141b1e"
+lighter_background = "#232a2d"
+red = "#e57474"
+green = "#8ccf7e"
+yellow = "#e5c76b"
+blue = "#67b0e8"
+magenta = "#c47fd5"
+cyan = "#6cbfbf"
+light_gray = "#b3b9b8"
+foreground = "#dadada"
+
+[palettes.darker-zenwritten]
+grey = "#3D3839"
+white = "#8E8E8E"
+red = "#DE6E7C"
+green = "#65B8C1"
+yellow = "#D68C67"
+cyan = "#61ABDA"
+magenta = "#CF86C1"
+blue = "#6099C0"
+
+palette = "darker-zenwritten"
+

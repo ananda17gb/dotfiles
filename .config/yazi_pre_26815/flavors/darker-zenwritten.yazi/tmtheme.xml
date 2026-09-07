@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>name</key>
+    <string>Pitch Black Zenwritten</string>
+    <key>semanticClass</key>
+    <string>theme.dark.pitch_black_zenwritten</string>
+    <key>uuid</key>
+    <string>627ce890-fabb-4d39-9819-7be71f4bdca7</string>
+    <key>author</key>
+    <string>Custom Monochrome Profile</string>
+    <key>colorSpaceName</key>
+    <string>sRGB</string>
+    <key>settings</key>
+    <array>
+      <dict>
+        <key>settings</key>
+        <dict>
+          <key>background</key>
+          <string>#000000</string>
+          <key>foreground</key>
+          <string>#BBBBBB</string>
+          <key>caret</key>
+          <string>#BBBBBB</string>
+          <key>lineHighlight</key>
+          <string>#191919</string>
+          <key>misspelling</key>
+          <string>#DE6E7C</string>
+          <key>accent</key>
+          <string>#BBBBBB</string>
+          <key>selection</key>
+          <string>#3D3839</string>
+          <key>activeGuide</key>
+          <string>#3D3839</string>
+          <key>findHighlight</key>
+          <string>#3D3839</string>
+          <key>gutterForeground</key>
+          <string>#8E8E8E</string>
+        </dict>
+      </dict>
+      <dict>
+        <key>name</key>
+        <string>Basic text &amp; variable names (incl. leading punctuation)</string>
+        <key>scope</key>
+        <string>text, source, variable.other.readwrite, punctuation.definition.variable</string>
+        <key>settings</key>
+        <dict>
+          <key>foreground</key>
+          <string>#BBBBBB</string>
+        </dict>
+      </dict>
+      <dict>
+        <key>name</key>
+        <string>Parentheses, Brackets, Braces</string>
+        <key>scope</key>
+        <string>punctuation</string>
+        <key>settings</key>
+        <dict>
+          <key>foreground</key>
+          <string>#BBBBBB</string>
+          <key>fontStyle</key>
+          <string/>
+        </dict>
+      </dict>
+      <dict>
+        <key>name</key>
+        <string>Comments</string>
+        <key>scope</key>
+        <string>comment, punctuation.definition.comment</string>
+        <key>settings</key>
+        <dict>
+          <key>foreground</key>
+          <string>#8E8E8E</string>
+          <key>fontStyle</key>
+          <string>italic</string>
+        </dict>
+      </dict>
+      <dict>
+        <key>scope</key>
+        <string>string, punctuation.definition.string</string>
+        <key>settings</key>
+        <dict>
+          <key>foreground</key>
+          <string>#BBBBBB</string>
+        </dict>
+      </dict>
+      <dict>
+        <key>scope</key>
+        <string>constant.character.escape</string>
+        <key>settings</key>
+        <dict>
+          <key>foreground</key>
+          <string>#8E8E8E</string>
+        </dict>
+      </dict>
+      <dict>
+        <key>name</key>
+        <string>Booleans, constants, numbers</string>
+        <key>scope</key>
+        <string>constant.numeric, variable.other.constant, entity.name.constant, constant.language.boolean, constant.language.false, constant.language.true, keyword.other.unit.user-defined, keyword.other.unit.suffix.floating-point</string>
+        <key>settings</key>
+        <dict>
+          <key>foreground</key>
+          <string>#D68C67</string>
+        </dict>
+      </dict>
+      <dict>
+        <key>scope</key>
+        <string>keyword, keyword.operator.word, keyword.operator.new, variable.language.super, support.type.primitive, storage.type, storage.modifier, punctuation.definition.keyword</string>
+        <key>settings</key>
+        <dict>
+          <key>foreground</key>
+          <string>#BBBBBB</string>
+          <key>fontStyle</key>
+          <string/>
+        </dict>
+      </dict>
+      <dict>
+        <key>name</key>
+        <string>Functions</string>
+        <key>scope</key>
+        <string>entity.name.function, meta.function-call.method, support.function, support.function.misc, variable.function</string>
+        <key>settings</key>
+        <dict>
+          <key>foreground</key>
+          <string>#819B69</string>
+          <key>fontStyle</key>
+          <string>italic</string>
+        </dict>
+      </dict>
+      <dict>
+        <key>name</key>
+        <string>Classes</string>
+        <key>scope</key>
+        <string>entity.name.class, entity.other.inherited-class, support.class, meta.function-call.constructor, entity.name.struct</string>
+        <key>settings</key>
+        <dict>
+          <key>foreground</key>
+          <string>#BBBBBB</string>
+          <key>fontStyle</key>
+          <string>italic</string>
+        </dict>
+      </dict>
+      <dict>
+        <key>name</key>
+        <string>Enum</string>
+        <key>scope</key>
+        <string>entity.name.enum</string>
+        <key>settings</key>
+        <dict>
+          <key>foreground</key>
+          <string>#BBBBBB</string>
+          <key>fontStyle</key>
+          <string>italic</string>
+        </dict>
+      </dict>
+      <dict>
+        <key>name</key>
+        <string>Object properties</string>
+        <key>scope</key>
+        <string>meta.property.object</string>
+        <key>settings</key>
+        <dict>
+          <key>foreground</key>
+          <string>#BBBBBB</string>
+        </dict>
+      </dict>
+      <dict>
+        <key>name</key>
+        <string>Types</string>
+        <key>scope</key>
+        <string>meta.type, meta.type-alias, support.type, entity.name.type</string>
+        <key>settings</key>
+        <dict>
+          <key>foreground</key>
+          <string>#BBBBBB</string>
+          <key>fontStyle</key>
+          <string>italic</string>
+        </dict>
+      </dict>
+      <dict>
+        <key>scope</key>
+        <string>variable.parameter, meta.function.parameters</string>
+        <key>settings</key>
+        <dict>
+          <key>foreground</key>
+          <string>#BBBBBB</string>
+          <key>fontStyle</key>
+          <string>italic</string>
+        </dict>
+      </dict>
+    </array>
+  </dict>
+</plist>

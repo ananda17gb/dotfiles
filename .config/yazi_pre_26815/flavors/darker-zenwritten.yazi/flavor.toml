@@ -1,0 +1,206 @@
+#:schema https://yazi-rs.github.io/schemas/theme.json
+# vim:fileencoding=utf-8:foldmethod=marker
+# : App {{{
+[app]
+overall = {}
+# : }}}
+# : Manager {{{
+[mgr]
+cwd = { fg = "#8E8E8E" }
+# Find
+find_keyword = { fg = "#D68C67", bold = true, italic = true, underline = true }
+find_position = { fg = "#BBBBBB", bg = "reset", bold = true, italic = true }
+# Symlink
+symlink_target = { italic = true }
+# Marker
+marker_copied = { fg = "#819B69", bg = "#819B69" }
+marker_cut = { fg = "#DE6E7C", bg = "#DE6E7C" }
+marker_marked = { fg = "#8E8E8E", bg = "#8E8E8E" }
+marker_selected = { fg = "#D68C67", bg = "#D68C67" }
+marker_symbol = "│"
+# Count
+count_copied = { fg = "#191919", bg = "#819B69" }
+count_cut = { fg = "#191919", bg = "#DE6E7C" }
+count_selected = { fg = "#191919", bg = "#D68C67" }
+# Border
+border_symbol = "│"
+border_style = { fg = "#3D3839" }
+# Highlighting
+syntect_theme = ""
+# : }}}
+# : Tabs {{{
+[tabs]
+active = { fg = "#BBBBBB", bg = "#3D3839", bold = true }
+inactive = { fg = "#8E8E8E", bg = "#191919" }
+# Separator
+sep_inner = { open = "", close = "" }
+sep_outer = { open = "", close = "" }
+# : }}}
+# : Mode {{{
+[mode]
+normal_main = { fg = "#191919", bg = "#BBBBBB", bold = true }
+normal_alt = { fg = "#BBBBBB", bg = "#3D3839" }
+# Select mode
+select_main = { fg = "#191919", bg = "#8E8E8E", bold = true }
+select_alt = { fg = "#8E8E8E", bg = "#3D3839" }
+# Unset mode
+unset_main = { fg = "#191919", bg = "#B77E64", bold = true }
+unset_alt = { fg = "#B77E64", bg = "#3D3839" }
+# : }}}
+# : Indicator of hovered file {{{
+[indicator]
+parent = { reversed = true }
+current = { reversed = true }
+preview = { underline = true }
+padding = { open = "", close = "" }
+# : }}}
+# : Status bar {{{
+[status]
+overall = {}
+sep_left = { open = "", close = "" }
+sep_right = { open = "", close = "" }
+# Permissions
+perm_sep   = { fg = "#3D3839" }  # Kept dark to stay out of the way
+perm_type  = { fg = "#757575" }  # Mid-gray for the type indicator (d, l, -)
+perm_read  = { fg = "#EEEEEE" }  # Brightest gray/white so reads stand out
+perm_write = { fg = "#B0B0B0" }  # Medium-light gray for write access
+perm_exec  = { fg = "#888888" }  # Muted gray for execution (or vice versa depending on preference)
+# Progress
+progress_label = { fg = "#BBBBBB", bold = true }
+progress_normal = { fg = "#819B69", bg = "#3D3839" }
+progress_error = { fg = "#D68C67", bg = "#DE6E7C" }
+# : }}}
+# : Which {{{
+[which]
+cols = 3
+mask = { bg = "#191919" }
+cand = { fg = "#BBBBBB" }
+rest = { fg = "#8E8E8E" }
+desc = { fg = "#8E8E8E" }
+separator = "  "
+separator_style = { fg = "#3D3839" }
+# : }}}
+# : Confirmation {{{
+[confirm]
+border = { fg = "#3D3839" }
+title = { fg = "#BBBBBB" }
+body = {}
+list = {}
+btn_yes = { reversed = true }
+btn_no = {}
+btn_labels = ["  [Y]es  ", "  (N)o  "]
+# : }}}
+# : Spotter {{{
+[spot]
+border = { fg = "#3D3839" }
+title = { fg = "#BBBBBB" }
+# Table
+tbl_col = { fg = "#8E8E8E" }
+tbl_cell = { fg = "#BBBBBB", bg = "#191919" }
+# : }}}
+# : Notification {{{
+[notify]
+title_info = { fg = "#819B69" }
+title_warn = { fg = "#D68C67" }
+title_error = { fg = "#DE6E7C" }
+# Icons
+icon_info = ""
+icon_warn = ""
+icon_error = ""
+# : }}}
+# : Picker {{{
+[pick]
+border = { fg = "#3D3839" }
+active = { fg = "#BBBBBB", bold = true }
+inactive = {}
+# : }}}
+# : Input {{{
+[input]
+border = { fg = "#3D3839" }
+title = {}
+value = {}
+selected = { reversed = true }
+# : }}}
+# : Completion {{{
+[cmp]
+border = { fg = "#3D3839" }
+active = { reversed = true }
+inactive = {}
+# Icons
+icon_file = ""
+icon_folder = ""
+icon_command = ""
+# : }}}
+# : Task manager {{{
+[tasks]
+border = { fg = "#3D3839" }
+title = {}
+hovered = { fg = "#BBBBBB", bold = true }
+# : }}}
+# : Help menu {{{
+[help]
+on = { fg = "#BBBBBB" }
+run = { fg = "#8E8E8E" }
+desc = {}
+hovered = { reversed = true, bold = true }
+footer = { fg = "#191919", bg = "#BBBBBB" }
+# : }}}
+# : File-specific styles {{{
+[filetype]
+rules = [
+  # Image
+  { mime = "image/*", fg = "#BBBBBB" },
+  # Media
+  { mime = "{audio,video}/*", fg = "#D68C67" },
+  # Archive
+  { mime = "application/{zip,rar,7z*,tar,gzip,xz,zstd,bzip*,lzma,compress,archive,cpio,arj,xar,ms-cab*}", fg = "#8E8E8E" },
+  # Document
+  { mime = "application/{pdf,doc,rtf}", fg = "#819B69" },
+  # Virtual file system
+  { mime = "vfs/{absent,stale}", fg = "#3D3839" },
+  # Special file
+  { url = "*", is = "orphan", bg = "#DE6E7C" },
+  { url = "*", is = "exec", fg = "#819B69" },
+  # Dummy file
+  { url = "*", is = "dummy", bg = "#DE6E7C" },
+  { url = "*/", is = "dummy", bg = "#DE6E7C" },
+  # Fallback
+  { url = "*", fg = "#BBBBBB" },
+  { url = "*/", fg = "#8E8E8E" },
+]
+# : }}}
+# : Icons {{{
+[icon]
+dirs = [
+  { name = ".config", text = "", fg = "#8E8E8E" },
+  { name = ".git", text = "", fg = "#3D3839" },
+  { name = ".github", text = "", fg = "#3D3839" },
+  { name = ".npm", text = "", fg = "#3D3839" },
+  { name = "Desktop", text = "", fg = "#8E8E8E" },
+  { name = "Development", text = "", fg = "#8E8E8E" },
+  { name = "Documents", text = "", fg = "#8E8E8E" },
+  { name = "Downloads", text = "", fg = "#8E8E8E" },
+  { name = "Library", text = "", fg = "#8E8E8E" },
+  { name = "Movies", text = "", fg = "#8E8E8E" },
+  { name = "Music", text = "", fg = "#8E8E8E" },
+  { name = "Pictures", text = "", fg = "#8E8E8E" },
+  { name = "Public", text = "", fg = "#8E8E8E" },
+  { name = "Videos", text = "", fg = "#8E8E8E" },
+]
+conds = [
+  # Special files
+  { if = "orphan", text = "", fg = "#DE6E7C" },
+  { if = "link", text = "", fg = "#3D3839" },
+  { if = "block", text = "", fg = "#B77E64" },
+  { if = "char", text = "", fg = "#B77E64" },
+  { if = "fifo", text = "", fg = "#B77E64" },
+  { if = "sock", text = "", fg = "#B77E64" },
+  { if = "sticky", text = "", fg = "#B77E64" },
+  { if = "dummy", text = "", fg = "#DE6E7C" },
+  # Fallback
+  { if = "dir & hovered", text = "", fg = "#BBBBBB" },
+  { if = "dir", text = "", fg = "#8E8E8E" },
+  { if = "exec", text = "", fg = "#819B69" },
+  { if = "!dir", text = "", fg = "#BBBBBB" },
+]
+# : }}}

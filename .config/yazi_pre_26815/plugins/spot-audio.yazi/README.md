@@ -1,0 +1,26 @@
+<img width="1920" height="1080" alt="window showing audio metadata" src="https://github.com/user-attachments/assets/d6eef132-bbba-4eb3-bb29-0527a38699d8" />
+
+# Installation
+
+```sh
+ya pkg add AminurAlam/yazi-plugins:spot AminurAlam/yazi-plugins:spot-audio
+```
+
+# Dependencies
+
+- [spot.yazi](/spot.yazi) - backend plugin
+- [exiftool](https://repology.org/project/exiftool/versions) - for extracting metadata
+
+# Usage
+
+in `~/.config/yazi/yazi.toml`
+
+```toml
+[plugin]
+prepend_spotters = [
+  { mime = 'audio/mpegurl', run = 'code' }, # ignore .m3u files
+  { url = "audio/*", run = "spot-audio" },
+]
+```
+
+for customizing the spotter see [spot.yazi](/spot.yazi) documentation

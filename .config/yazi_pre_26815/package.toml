@@ -1,0 +1,87 @@
+[[plugin.deps]]
+use = "yazi-rs/plugins:smart-filter"
+rev = "72f9e3c"
+hash = "d6f7351ea25a43c9b5f4315fa1e23935"
+
+[[plugin.deps]]
+use = "yazi-rs/plugins:git"
+rev = "72f9e3c"
+hash = "5bb0bfab901d3601c370eafdd66edd31"
+
+[[plugin.deps]]
+use = "jessefarinacci/confirm-quit"
+rev = "6fec416"
+hash = "c6cce44dacc7d1d93b6604f15cdcc539"
+
+[[plugin.deps]]
+use = "uhs-robert/recycle-bin"
+rev = "82da16a"
+hash = "7383d80862d3cdcc85f8658dac7b90c2"
+
+[[plugin.deps]]
+use = "Rolv-Apneseth/starship"
+rev = "ea92cf4"
+hash = "9776f378459072b6c2875eae5addc49d"
+
+[[plugin.deps]]
+use = "yazi-rs/plugins:full-border"
+rev = "72f9e3c"
+hash = "f281261ff04ad7ec867c3f802a50835f"
+
+[[plugin.deps]]
+use = "AminurAlam/yazi-plugins:preview-git"
+rev = "8c2ce96"
+hash = "ba369f2f02be9e932cf7882c113d6844"
+
+[[plugin.deps]]
+use = "yazi-rs/plugins:mime-ext"
+rev = "72f9e3c"
+hash = "3bcc00df11efc3ae5d15f2dba860be7"
+
+[[plugin.deps]]
+use = "MasouShizuka/close-and-restore-tab"
+rev = "b2153bc"
+hash = "1493e40f8f4f222c9ecb24cf85ccabd2"
+
+[[plugin.deps]]
+use = "AnirudhG07/rich-preview"
+rev = "02597c4"
+hash = "33982a6e2d6df07619a2a0fc163a0950"
+
+[[plugin.deps]]
+use = "boydaihungst/mediainfo"
+rev = "77825c4"
+hash = "d3f66511162da335057842e1b9221365"
+
+[[plugin.deps]]
+use = "KKV9/compress"
+rev = "e60e122"
+hash = "fbaf0adc8efc59555b748d36aab62d40"
+
+[[plugin.deps]]
+use = "AminurAlam/yazi-plugins:spot"
+rev = "8c2ce96"
+hash = "5c045744914668f647e67bd4ea3fb9a2"
+
+[[plugin.deps]]
+use = "AminurAlam/yazi-plugins:spot-audio"
+rev = "8c2ce96"
+hash = "d5b679a595f131bbd4bd789ec47cd8bb"
+
+[[plugin.deps]]
+use = "yazi-rs/plugins:mount"
+rev = "72f9e3c"
+hash = "46cbdc05596a3ecd730b288e28c7079d"
+
+[[plugin.deps]]
+use = "boydaihungst/gvfs"
+rev = "ebdb87c"
+hash = "69c24ef7e0a591864c76ac6e6dedc805"
+
+[[plugin.deps]]
+use = "yazi-rs/plugins:chmod"
+rev = "72f9e3c"
+hash = "87472b05a8c420100f6a2b9cde1e7746"
+
+[flavor]
+deps = []
