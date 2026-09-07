@@ -59,7 +59,9 @@ M.tools = {
   -- { kind = "lsp",       lsp = "clangd",              mason = "clangd" },
   { kind = "lsp",       lsp = "biome",             mason = "biome" },
   { kind = "lsp",       lsp = "marksman",          mason = "marksman" },
-  { kind = "lsp",       lsp = "tombi",             mason = "tombi" },
+  -- { kind = "lsp",       lsp = "tombi",             mason = "tombi" },
+  { kind = "lsp",       lsp = "prismals",          mason = "prisma-language-server" },
+  { kind = "lsp",       lsp = "sqls",              mason = "sqls" },
 
   { kind = "formatter", mason = "dart_format",     ft = { "dart" } },
   { kind = "formatter", mason = "ruff",            ft = { "python" } },
@@ -71,7 +73,7 @@ M.tools = {
   { kind = "formatter", mason = "prettierd",       ft = {} },
   { kind = "formatter", mason = "biome",           ft = {} },
   { kind = "formatter", mason = "npm-groovy-lint", ft = { "groovy" } },
-  { kind = "formatter", mason = "tombi",           ft = { "toml" } },
+  -- { kind = "formatter", mason = "tombi",           ft = { "toml" } },
 
   { kind = "linter",    mason = "stylelint",       ft = { "css" } },
   { kind = "linter",    mason = "shellcheck",      ft = { "sh", "bash" } },
@@ -81,10 +83,10 @@ M.tools = {
   { kind = "linter",    mason = "markuplint",      ft = { "html", "astro" } },
   { kind = "linter",    mason = "dotenv-linter",   ft = { "sh", "bash" } },
   { kind = "linter",    mason = "npm-groovy-lint", ft = { "groovy" } },
-  { kind = "linter",    mason = "kulala-fmt",      ft = { "http", "rest" } },
+  -- { kind = "linter",    mason = "kulala-fmt",      ft = { "http", "rest" } },
   { kind = "linter",    mason = "eslint_d",        ft = {} },
   { kind = "linter",    mason = "biome",           ft = {} },
-  { kind = "linter",    mason = "tombi",           ft = { "toml" } },
+  -- { kind = "linter",    mason = "tombi",           ft = { "toml" } },
   -- { kind = "linter",    mason = "markdownlint-cli2", ft = { "markdown" } },
 }
 

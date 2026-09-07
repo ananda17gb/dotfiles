@@ -10,27 +10,27 @@ end
 
 function M.setup()
   vim.keymap.set("n", "<leader>Dc", function()
-    with_dap(require("dap").continue)
+    require("dap").continue()
   end, { desc = "DAP: Start/Continue Session" })
 
   vim.keymap.set("n", "<leader>Db", function()
-    with_dap(require("dap").toggle_breakpoint)
+    require("dap").toggle_breakpoint()
   end, { desc = "DAP: Toggle Breakpoint" })
 
   vim.keymap.set("n", "<leader>Di", function()
-    with_dap(require("dap").step_into)
+    require("dap").step_into()
   end, { desc = "DAP: Step Into" })
 
   vim.keymap.set("n", "<leader>Do", function()
-    with_dap(require("dap").step_over)
+    require("dap").step_over()
   end, { desc = "DAP: Step Over" })
 
   vim.keymap.set("n", "<leader>Dx", function()
-    with_dap(require("dap").step_out)
+    require("dap").step_out()
   end, { desc = "DAP: Step Out" })
 
   vim.keymap.set("n", "<leader>Dq", function()
-    with_dap(require("dap").terminate)
+    require("dap").terminate()
   end, { desc = "DAP: Stop Debugging" })
 end
 

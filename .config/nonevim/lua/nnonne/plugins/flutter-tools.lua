@@ -18,7 +18,7 @@ local function load_flutter()
         },
       },
       debugger = {
-        enabled = false, -- enable nvim-dap integration -- idk have nvim-dap so disabled
+        enabled = true, -- enable nvim-dap integration -- idk have nvim-dap so disabled
       },
       root_patterns = { ".git", "pubspec.yaml" },
       widget_guides = { enabled = true },

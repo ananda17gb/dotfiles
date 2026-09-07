@@ -110,6 +110,17 @@ function M.setup()
     },
   })
 
+  vim.lsp.config("sqls", {
+    on_attach = function(client, bufnr)
+      -- Disable sqls formatting capabilities to prevent AST crashes
+      client.server_capabilities.documentFormattingProvider = false
+      client.server_capabilities.documentRangeFormattingProvider = false
+
+      -- Optional: bind sqls buffer commands if you use sqllinks/connections
+      require('sqls').on_attach(client, bufnr)
+    end,
+  })
+
   vim.lsp.config("lua_ls", {
     cmd = { 'lua-language-server' },
     filetypes = { 'lua' },
@@ -162,6 +173,8 @@ function M.setup()
     marksman    = { "markdown" },
     tombi       = { "toml" },
     lua_ls      = { "lua" },
+    prismals    = { "prisma" },
+    sqls        = { "sql" },
   }
 
   for server, fts in pairs(ft_scope) do
@@ -179,7 +192,7 @@ function M.setup()
   end, { desc = "Import" })
 
   require("conform").setup({
-    format_on_save = {
+    format_after_save = {
       timeout_ms = 2500,
       lsp_fallback = true,
     },
@@ -192,6 +205,10 @@ function M.setup()
           end, vim.diagnostic.get(ctx.buf))
           return #diag > 0
         end,
+      },
+      prettier = {
+        -- Pass default flags or prevent requiring a config file
+        args = { "--stdin-filepath", "$FILENAME" },
       },
     }
   })

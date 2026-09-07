@@ -1,7 +1,3 @@
--- TODO:
--- - add and configure keymaps
---
--- Shout out https://github.com/kokopi-dev/dotfiles/blob/master/nvim/init.lua
 vim.loader.enable()
 
 require("nnonne.commands.pack").setup()
