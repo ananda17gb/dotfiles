@@ -1,0 +1,425 @@
+--- Startup times for process: Primary (or UI client) ---
+
+times in msec
+ clock   self+sourced   self:  sourced script
+ clock   elapsed:              other lines
+
+000.001  000.001: --- NVIM STARTING ---
+000.312  000.311: event init
+000.502  000.189: early init
+000.615  000.113: locale set
+000.726  000.111: init first window
+001.699  000.973: inits 1
+001.723  000.024: window checked
+001.731  000.008: parsing arguments
+003.309  000.163  000.163: require('vim._core.shared')
+003.555  000.011  000.011: require('string.buffer')
+003.659  000.176  000.164: require('vim.inspect')
+003.823  000.137  000.137: require('vim._core.options')
+003.829  000.511  000.199: require('vim._core.editor')
+003.985  000.153  000.153: require('vim._core.system')
+003.990  000.944  000.117: require('vim._init_packages')
+003.998  001.323: init lua interpreter
+004.102  000.104: expanding arguments
+004.162  000.061: inits 2
+005.280  001.118: init highlight
+005.343  000.063: clear screen
+005.915  000.077  000.077: require('vim.keymap')
+008.501  000.433  000.433: sourcing nvim_exec2()
+008.622  000.051  000.051: require('vim._core.log')
+008.876  003.517  002.956: require('vim._core.defaults')
+008.883  000.023: init default mappings & autocommands
+009.697  000.126  000.126: sourcing /usr/share/nvim/runtime/ftplugin.vim
+009.830  000.071  000.071: sourcing /usr/share/nvim/runtime/indent.vim
+010.411  000.115  000.115: require('vim.fs')
+010.778  000.353  000.353: require('vim.uri')
+010.825  000.770  000.302: require('vim.loader')
+011.582  000.263  000.263: require('vim.ui.clipboard.osc52')
+015.407  001.958  001.958: require('vim.lsp.protocol')
+015.500  002.207  000.249: require('vim.lsp.log')
+016.218  000.054  000.054: require('vim._core.util')
+016.483  000.970  000.916: require('vim.lsp.util')
+017.459  000.130  000.130: require('vim.lsp.sync')
+017.479  000.941  000.811: require('vim.lsp._changetracking')
+017.771  000.122  000.122: require('vim.lsp._transport')
+017.793  000.015  000.015: require('vim._core.stringbuffer')
+017.957  000.469  000.333: require('vim.lsp.rpc')
+018.129  005.298  000.710: require('vim.lsp')
+018.894  000.553  000.553: require('vim.lsp.completion')
+019.088  000.950  000.397: require('vim.lsp.handlers')
+019.096  008.224  001.713: require('nnonne.config.options')
+020.288  001.187  001.187: require('nnonne.config.keymaps')
+020.586  000.289  000.289: require('nnonne.config.autocommands')
+020.843  000.249  000.249: require('nnonne.config.core-ui2')
+020.986  000.127  000.127: require('vim._core.ui2')
+024.018  002.145  002.145: require('lazy')
+024.108  000.050  000.050: require('ffi')
+024.553  000.429  000.429: require('lazy.stats')
+024.862  000.252  000.252: require('lazy.core.util')
+025.665  000.796  000.796: require('lazy.core.config')
+026.528  000.330  000.330: require('lazy.core.handler')
+027.534  000.255  000.255: require('lazy.pkg')
+027.558  000.676  000.421: require('lazy.core.meta')
+027.577  001.039  000.363: require('lazy.core.plugin')
+027.612  001.933  000.564: require('lazy.core.loader')
+029.490  000.332  000.332: require('lazy.async')
+030.299  000.553  000.553: require('lazy.manage.process')
+030.768  000.460  000.460: require('lazy.terminal')
+030.810  001.307  000.294: require('lazy.manage.task')
+030.871  001.997  000.358: require('lazy.manage.runner')
+030.914  002.344  000.347: require('lazy.manage')
+030.924  002.659  000.315: require('lazy.view.commands')
+031.398  000.320  000.320: require('lazy.core.fragments')
+039.001  000.243  000.243: require('lazy.core.handler.event')
+039.017  000.375  000.132: require('lazy.core.handler.ft')
+039.142  000.114  000.114: require('lazy.core.handler.cmd')
+039.286  000.129  000.129: require('lazy.core.handler.keys')
+039.986  000.022  000.022: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+040.025  000.005  000.005: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+040.489  000.011  000.011: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+040.523  000.004  000.004: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+041.523  000.009  000.009: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+041.556  000.003  000.003: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+042.119  000.008  000.008: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+042.161  000.004  000.004: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+043.386  000.333  000.333: sourcing nvim_exec2() called at /usr/share/nvim/runtime/filetype.lua:0
+043.398  000.566  000.233: sourcing /usr/share/nvim/runtime/filetype.lua
+043.407  000.634  000.068: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+044.546  000.113  000.113: sourcing /home/nnonne/.local/share/nvim-lazy/lazy/lush.nvim/plugin/lush.vim
+044.561  000.179  000.066: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+044.583  000.006  000.006: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+044.608  000.003  000.003: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+044.639  000.004  000.004: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+044.654  000.002  000.002: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+048.828  000.142  000.142: require('lush.math')
+049.088  000.244  000.244: require('lush.vivid.rgb.convert')
+049.098  000.633  000.246: require('lush.vivid.hsl.convert')
+049.378  000.276  000.276: require('lush.vivid.hsl_like')
+049.387  001.146  000.238: require('lush.vivid.hsl.type')
+049.806  000.217  000.217: require('lush.vivid.hsluv.lib')
+049.817  000.339  000.121: require('lush.vivid.hsluv.convert')
+049.824  000.433  000.094: require('lush.vivid.hsluv.type')
+049.840  002.953  001.374: require('lush')
+050.221  000.376  000.376: require('zenbones.util')
+051.251  000.209  000.209: require('zenbones.specs')
+051.945  000.593  000.593: require('zenbones.specs.dark')
+052.964  000.310  000.310: require('lush.errors')
+053.012  000.757  000.447: require('lush.parser')
+071.388  000.622  000.622: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/colors/darker-zenwritten.lua:0
+071.598  000.191  000.191: require('lush.compiler')
+080.096  000.184  000.184: require('zenbones.term')
+080.519  033.777  027.892: sourcing /home/nnonne/.config/nvim-lazy/colors/darker-zenwritten.lua
+081.827  000.114  000.114: require('vim.treesitter.language')
+081.925  000.086  000.086: require('vim.func')
+082.034  000.102  000.102: require('vim.treesitter._range')
+082.153  000.103  000.103: require('vim.func._memoize')
+082.248  000.772  000.368: require('vim.treesitter.query')
+082.295  001.081  000.308: require('vim.treesitter.languagetree')
+082.314  001.311  000.231: require('vim.treesitter')
+082.774  001.964  000.653: sourcing /home/nnonne/.local/share/nvim-lazy/lazy/nvim-treesitter/plugin/filetypes.lua
+082.891  002.143  000.179: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+083.213  000.205  000.205: sourcing /home/nnonne/.local/share/nvim-lazy/lazy/nvim-treesitter/plugin/nvim-treesitter.lua
+083.226  000.303  000.097: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+083.385  000.090  000.090: sourcing /home/nnonne/.local/share/nvim-lazy/lazy/nvim-treesitter/plugin/query_predicates.lua
+083.393  000.146  000.056: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+083.414  000.008  000.008: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+083.441  000.003  000.003: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+083.994  000.536  000.536: require('nvim-treesitter')
+084.232  000.214  000.214: require('nvim-treesitter.config')
+084.987  000.400  000.400: require('nvim-treesitter.async')
+085.160  000.165  000.165: require('nvim-treesitter.log')
+088.965  003.800  003.800: require('nvim-treesitter.parsers')
+089.210  000.223  000.223: require('nvim-treesitter.util')
+089.271  004.972  000.384: require('nvim-treesitter.install')
+091.887  002.513  002.513: require('nvim-treesitter.parsers')
+096.061  000.018  000.018: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+096.107  000.005  000.005: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+098.117  001.997  001.997: require('mini.pairs')
+102.030  001.819  001.819: require('mini.icons')
+102.539  000.356  000.356: require('mini.notify')
+103.605  000.669  000.669: require('mini.extra')
+103.835  000.213  000.213: require('mini.jump')
+104.639  000.164  000.164: require('mini.bufremove')
+105.353  000.686  000.686: require('mini.snippets')
+106.960  001.259  001.259: require('vim.lsp.client')
+107.605  000.100  000.100: require('vim.lsp._capability')
+107.671  000.382  000.282: require('vim.lsp.semantic_tokens')
+107.884  000.208  000.208: require('vim.lsp._folding_range')
+108.409  000.382  000.382: require('vim.lsp._snippet_grammar')
+108.434  000.543  000.161: require('vim.lsp.inline_completion')
+108.891  000.453  000.453: require('vim.lsp.document_color')
+109.091  000.185  000.185: require('vim.version')
+113.893  000.782  000.782: require('mini.diff')
+114.244  000.017  000.017: require('vim.F')
+114.651  000.342  000.342: require('mini.hipatterns')
+115.197  000.406  000.406: require('mini.indentscope')
+116.225  000.771  000.771: require('mini.ai')
+117.915  001.169  001.169: require('mini.bracketed')
+121.401  001.264  001.264: require('mini.surround')
+152.716  001.002  001.002: require('mini.pick')
+153.282  000.182  000.182: require('vim.ui')
+153.671  000.376  000.376: require('mini.starter')
+153.880  000.041  000.041: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+153.915  000.005  000.005: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+154.390  000.128  000.128: require('lualine_require')
+155.300  001.371  001.243: require('lualine')
+156.207  000.036  000.036: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+157.820  000.208  000.208: require('lualine.highlight')
+160.116  000.026  000.026: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+160.170  000.012  000.012: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+160.198  000.008  000.008: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+160.221  000.007  000.007: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+160.243  000.007  000.007: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+160.263  000.006  000.006: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+160.350  000.008  000.008: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+160.376  000.007  000.007: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+160.982  000.014  000.014: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+161.051  000.009  000.009: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+161.142  000.010  000.010: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+161.164  000.006  000.006: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+161.518  000.009  000.009: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+161.552  000.009  000.009: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+161.570  000.007  000.007: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+161.589  000.006  000.006: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+161.611  000.007  000.007: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+161.630  000.006  000.006: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+161.646  000.006  000.006: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+161.665  000.006  000.006: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+161.680  000.006  000.006: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+161.696  000.006  000.006: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+161.825  000.036  000.036: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+164.575  000.026  000.026: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+164.613  000.017  000.017: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+165.318  000.021  000.021: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+165.350  000.008  000.008: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+165.372  000.006  000.006: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+165.391  000.007  000.007: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+165.411  000.006  000.006: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+165.430  000.006  000.006: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+165.448  000.006  000.006: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+165.477  000.007  000.007: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+165.497  000.008  000.008: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+165.516  000.007  000.007: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+165.629  000.008  000.008: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+165.701  000.007  000.007: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+165.760  000.008  000.008: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+165.814  000.007  000.007: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+165.932  000.009  000.009: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+165.953  000.006  000.006: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+165.971  000.007  000.007: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+165.989  000.006  000.006: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+166.007  000.006  000.006: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+166.026  000.006  000.006: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+166.045  000.007  000.007: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+166.448  000.025  000.025: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+166.472  000.007  000.007: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+166.489  000.007  000.007: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+166.508  000.012  000.012: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+168.213  000.039  000.039: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+168.271  000.015  000.015: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+168.307  000.011  000.011: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+168.339  000.012  000.012: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+168.373  000.011  000.011: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+168.404  000.011  000.011: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+168.437  000.011  000.011: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+168.493  000.014  000.014: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+168.519  000.007  000.007: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+168.540  000.006  000.006: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+168.665  000.009  000.009: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+168.688  000.007  000.007: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+168.793  000.009  000.009: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+168.812  000.006  000.006: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+168.840  000.007  000.007: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+168.871  000.007  000.007: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+168.889  000.006  000.006: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+168.905  000.006  000.006: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+168.924  000.006  000.006: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+168.942  000.006  000.006: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+168.959  000.006  000.006: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+168.985  000.007  000.007: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+169.011  000.007  000.007: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+169.030  000.007  000.007: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+169.048  000.006  000.006: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+169.147  000.009  000.009: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+169.168  000.006  000.006: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+169.186  000.006  000.006: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+170.739  000.162  000.162: require('lualine.utils.mode')
+170.912  000.043  000.043: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+171.103  000.018  000.018: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+171.138  000.008  000.008: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+171.160  000.007  000.007: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+171.185  000.006  000.006: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+171.205  000.007  000.007: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+171.224  000.006  000.006: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+171.249  000.008  000.008: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+171.282  000.007  000.007: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+171.307  000.006  000.006: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+171.327  000.006  000.006: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+171.352  000.007  000.007: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+171.371  000.006  000.006: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+171.654  000.012  000.012: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+171.690  000.009  000.009: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+171.802  000.010  000.010: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+171.829  000.007  000.007: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+171.952  000.112  000.112: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+171.978  000.007  000.007: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+171.995  000.006  000.006: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+172.012  000.006  000.006: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+172.035  000.006  000.006: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+172.073  000.025  000.025: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+172.102  000.013  000.013: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+172.354  000.013  000.013: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+172.377  000.007  000.007: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+172.400  000.006  000.006: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+172.418  000.006  000.006: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+172.435  000.006  000.006: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+172.457  000.007  000.007: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+172.473  000.006  000.006: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+172.506  000.006  000.006: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+172.522  000.006  000.006: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+172.538  000.006  000.006: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+172.559  000.006  000.006: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+172.575  000.006  000.006: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+172.597  000.007  000.007: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+172.613  000.006  000.006: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+172.643  000.006  000.006: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+172.660  000.006  000.006: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+172.676  000.006  000.006: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+172.697  000.006  000.006: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+172.713  000.006  000.006: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+172.734  000.006  000.006: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+172.750  000.006  000.006: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+172.781  000.007  000.007: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+172.798  000.006  000.006: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+172.814  000.006  000.006: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+172.832  000.006  000.006: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+172.865  000.020  000.020: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+172.901  000.007  000.007: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+172.918  000.006  000.006: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+177.160  000.038  000.038: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+177.250  000.020  000.020: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+177.313  000.049  000.049: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+177.342  000.018  000.018: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+177.374  000.016  000.016: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+177.969  000.266  000.266: sourcing /home/nnonne/.local/share/nvim-lazy/lazy/fff/plugin/fff.lua
+177.983  000.336  000.070: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+178.121  000.007  000.007: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+178.193  000.004  000.004: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+178.987  000.291  000.291: require('fff.main')
+178.997  000.762  000.471: require('fff')
+179.262  000.011  000.011: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+179.317  000.004  000.004: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+180.466  000.099  000.099: require('bufferline.lazy')
+180.677  000.188  000.188: require('bufferline.commands')
+181.063  000.373  000.373: require('bufferline.config')
+181.076  001.650  000.991: require('bufferline')
+181.878  000.331  000.331: require('bufferline.utils')
+181.890  000.786  000.455: require('bufferline.groups')
+182.095  000.151  000.151: require('bufferline.constants')
+182.258  000.151  000.151: require('bufferline.colors')
+183.097  000.340  000.340: require('bufferline.highlights')
+188.622  003.652  003.652: require('bufferline.hover')
+189.420  000.639  000.639: require('bufferline.ui')
+190.888  001.430  001.430: require('vim.diagnostic')
+191.186  000.018  000.018: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+191.319  000.005  000.005: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+192.473  000.230  000.230: require('toggleterm.lazy')
+192.598  000.113  000.113: require('toggleterm.constants')
+193.100  000.492  000.492: require('toggleterm.terminal')
+193.131  001.798  000.963: require('toggleterm')
+193.518  000.207  000.207: require('toggleterm.colors')
+193.729  000.204  000.204: require('toggleterm.utils')
+193.764  000.625  000.214: require('toggleterm.config')
+197.248  000.279  000.279: require('toggleterm.commandline')
+198.411  000.015  000.015: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+198.448  000.004  000.004: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+198.927  000.008  000.008: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+198.965  000.003  000.003: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+199.697  000.189  000.189: sourcing /home/nnonne/.local/share/nvim-lazy/lazy/oil-git.nvim/plugin/oil-git.lua
+199.712  000.260  000.071: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+199.732  000.006  000.006: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+199.757  000.003  000.003: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+199.801  000.004  000.004: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+199.824  000.003  000.003: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+200.958  001.018  001.018: require('oil')
+201.361  000.239  000.239: require('oil.ringbuf')
+201.714  000.345  000.345: require('oil.config')
+217.336  014.039  014.039: require('vim.filetype')
+221.652  000.318  000.318: require('oil.log')
+221.695  000.897  000.579: require('oil.fs')
+222.030  000.089  000.089: require('oil.constants')
+222.177  000.477  000.387: require('oil.util')
+222.533  000.086  000.086: require('oil-git-status.system')
+222.583  000.397  000.311: require('oil-git-status')
+223.182  000.088  000.088: require('oil-git.constants')
+223.199  000.212  000.124: require('oil-git.config')
+223.422  000.084  000.084: require('oil-git.path')
+223.606  000.097  000.097: require('oil-git.status_mapper')
+223.615  000.188  000.091: require('oil-git.trie')
+223.694  000.074  000.074: require('oil-git.util')
+223.707  000.503  000.156: require('oil-git.git')
+223.845  000.134  000.134: require('oil-git.highlights')
+223.871  001.033  000.184: require('oil-git')
+224.506  000.367  000.367: require('oil-lsp-diagnostics')
+225.395  000.022  000.022: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+225.423  000.004  000.004: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+226.406  000.600  000.600: require('blink.cmp')
+226.679  000.117  000.117: require('blink.cmp.lib.async')
+226.888  000.089  000.089: require('blink.cmp.config.utils')
+226.979  000.084  000.084: require('blink.cmp.config.keymap')
+227.437  000.361  000.361: require('blink.cmp.config.completion.keyword')
+227.609  000.153  000.153: require('blink.cmp.config.completion.trigger')
+227.718  000.101  000.101: require('blink.cmp.config.completion.list')
+227.828  000.103  000.103: require('blink.cmp.config.completion.accept')
+227.999  000.166  000.166: require('blink.cmp.config.completion.menu')
+228.111  000.106  000.106: require('blink.cmp.config.completion.documentation')
+228.197  000.080  000.080: require('blink.cmp.config.completion.ghost_text')
+228.204  001.220  000.148: require('blink.cmp.config.completion')
+228.335  000.125  000.125: require('blink.cmp.config.fuzzy')
+228.456  000.116  000.116: require('blink.cmp.config.sources')
+228.560  000.099  000.099: require('blink.cmp.config.signature')
+228.670  000.104  000.104: require('blink.cmp.config.snippets')
+228.775  000.100  000.100: require('blink.cmp.config.appearance')
+228.951  000.170  000.170: require('blink.cmp.config.modes.cmdline')
+229.040  000.083  000.083: require('blink.cmp.config.modes.term')
+229.050  002.365  000.176: require('blink.cmp.config')
+229.196  000.141  000.141: require('blink.cmp.lib.utils')
+229.291  000.088  000.088: require('blink.cmp.lib.event_emitter')
+229.314  002.898  000.188: require('blink.cmp.sources.lib')
+229.373  003.826  000.328: sourcing /home/nnonne/.local/share/nvim-lazy/lazy/blink.cmp/plugin/blink-cmp.lua
+229.388  003.899  000.073: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+229.421  000.013  000.013: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+229.450  000.004  000.004: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+233.016  000.171  000.171: require('blink.cmp.config.modes.types')
+234.337  000.142  000.142: require('blink.cmp.fuzzy.download.system')
+234.411  000.332  000.191: require('blink.cmp.fuzzy.download.files')
+234.420  000.437  000.105: require('blink.cmp.fuzzy.download.git')
+234.431  000.648  000.212: require('blink.cmp.fuzzy.download')
+241.787  000.214  000.214: sourcing /usr/share/nvim/runtime/plugin/editorconfig.lua
+241.812  000.327  000.114: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+242.146  000.177  000.177: sourcing /usr/share/nvim/runtime/plugin/man.lua
+242.159  000.233  000.056: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+242.436  000.224  000.224: sourcing /usr/share/nvim/runtime/plugin/net.lua
+242.446  000.269  000.044: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+242.671  000.138  000.138: sourcing /usr/share/nvim/runtime/plugin/osc52.lua
+242.681  000.183  000.046: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+243.267  000.533  000.533: sourcing /usr/share/nvim/runtime/plugin/rplugin.vim
+243.279  000.578  000.045: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+243.698  000.324  000.324: sourcing /usr/share/nvim/runtime/plugin/shada.lua
+243.709  000.370  000.046: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+243.938  000.120  000.120: sourcing /usr/share/nvim/runtime/plugin/spellfile.lua
+243.948  000.187  000.067: sourcing nvim_exec2() called at /home/nnonne/.config/nvim-lazy/init.lua:0
+244.478  223.002  111.113: require('nnonne.config.lazy')
+244.487  234.517  000.668: sourcing /home/nnonne/.config/nvim-lazy/init.lua
+244.509  000.912: sourcing vimrc file(s)
+244.942  000.118  000.118: sourcing /usr/share/nvim/runtime/filetype.lua
+245.509  000.215  000.215: sourcing /usr/share/nvim/runtime/syntax/synload.vim
+245.745  000.690  000.475: sourcing /usr/share/nvim/runtime/syntax/syntax.vim
+245.805  000.489: inits 3
+249.848  004.043: reading ShaDa
+253.371  003.523: opening buffers
+254.631  000.277  000.277: require('bufferline.state')
+254.736  001.088: BufEnter autocommands
+254.750  000.014: editing files in windows
+254.771  000.021: --- NVIM STARTED ---
+
